@@ -35,7 +35,7 @@ function roundToDigits(float: number, digits: number): number {
 }
 
 export default defineComponent({
-  name: "ResultRecipe",
+  name: "DoughCalculatorRecipe",
   props: {
     recipe: {
       type: Object as PropType<Recipe>,

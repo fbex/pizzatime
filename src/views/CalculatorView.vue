@@ -12,19 +12,17 @@
           >Wikipedia</a
         >.
       </h2>
-      <Calculator />
+      <DoughCalculator />
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Calculator from "@/components/calculator/Calculator.vue";
+import DoughCalculator from "@/components/calculator/DoughCalculator.vue";
 
 export default defineComponent({
-  name: "DoughCalculator",
-  components: { Calculator }
+  name: "CalculatorView",
+  components: { DoughCalculator }
 });
 </script>
-
-<style scoped></style>

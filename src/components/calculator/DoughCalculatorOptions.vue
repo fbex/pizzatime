@@ -1,15 +1,15 @@
 <template>
   <h4 class="title is-4">Choose your options</h4>
-  <NumberInput
+  <BaseInputNumber
     label="Number of pizzas"
     placeholder="Number of pizzas"
     v-model.number="numberOfPizzas"
-  ></NumberInput>
-  <NumberInput
+  ></BaseInputNumber>
+  <BaseInputNumber
     label="Weight per pizza (g)"
     placeholder="Weight per pizza (g)"
     v-model.number="weightPerPizza"
-  ></NumberInput>
+  ></BaseInputNumber>
   <div class="control">
     <button class="button is-link" @click="onCalculate">Calculate</button>
   </div>
@@ -18,11 +18,11 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { PizzaOptions } from "@/components/calculator/model";
-import NumberInput from "@/components/calculator/NumberInput.vue";
+import BaseInputNumber from "@/components/calculator/BaseInputNumber.vue";
 
 export default defineComponent({
-  name: "OptionsModifier",
-  components: { NumberInput },
+  name: "DoughCalculatorOptions",
+  components: { BaseInputNumber },
   props: {
     modelValue: {
       type: Object as PropType<PizzaOptions>
@@ -46,6 +46,7 @@ export default defineComponent({
         });
       }
     },
+
     weightPerPizza: {
       get(): number | undefined {
         return this.modelValue?.weightPerPizza;
@@ -60,5 +61,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped></style>

@@ -1,15 +1,15 @@
 <template>
-  <Navbar />
+  <TheNavbar />
   <router-view />
-  <Footer />
+  <TheFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import TheFooter from "@/components/TheFooter.vue";
+import TheNavbar from "@/components/TheNavbar.vue";
 
 export default defineComponent({
-  components: { Footer, Navbar }
+  components: { TheNavbar, TheFooter }
 });
 </script>

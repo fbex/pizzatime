@@ -16,7 +16,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "NumberInput",
+  name: "BaseInputNumber",
   props: {
     modelValue: Number,
     label: String,
@@ -35,5 +35,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped></style>

@@ -22,8 +22,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import IngredientsModifier from "@/components/calculator/IngredientsModifier.vue";
-import ResultRecipe from "@/components/calculator/ResultRecipe.vue";
+import IngredientsModifier from "@/components/calculator/DoughCalculatorIngredients.vue";
+import ResultRecipe from "@/components/calculator/DoughCalculatorRecipe.vue";
 import {
   Ingredient,
   Ingredients,
@@ -31,10 +31,10 @@ import {
   Recipe,
   RecipeIngredient
 } from "@/components/calculator/model";
-import OptionsModifier from "@/components/calculator/OptionsModifier.vue";
+import OptionsModifier from "@/components/calculator/DoughCalculatorOptions.vue";
 
 export default defineComponent({
-  name: "Calculator",
+  name: "DoughCalculator",
   components: { OptionsModifier, ResultRecipe, IngredientsModifier },
   data() {
     return {
@@ -42,6 +42,7 @@ export default defineComponent({
         numberOfPizzas: 4,
         weightPerPizza: 250
       } as PizzaOptions,
+
       ingredients: {
         flour: {
           label: "Flour",
@@ -86,6 +87,7 @@ export default defineComponent({
           locked: false
         } as Ingredient
       } as Ingredients,
+
       recipe: undefined as Recipe | undefined
     };
   },
@@ -119,5 +121,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped></style>

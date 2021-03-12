@@ -42,7 +42,7 @@ import { defineComponent, PropType } from "vue";
 import { Ingredient, Ingredients } from "@/components/calculator/model";
 
 export default defineComponent({
-  name: "IngredientsModifier",
+  name: "DoughCalculatorIngredients",
   props: {
     ingredients: {
       type: Object as PropType<Ingredients>,
