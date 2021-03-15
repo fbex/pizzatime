@@ -3,7 +3,7 @@
   <p class="label">
     {{ recipe.numberOfPizzas }} pizzas with {{ recipe.weightPerPizza }} g
   </p>
-  <table class="table is-fullwidth">
+  <table class="table is-striped is-hoverable is-fullwidth">
     <thead>
       <tr>
         <th>Ingredient</th>
@@ -18,7 +18,7 @@
     </tfoot>
     <tbody>
       <tr v-for="ingredient in recipe.ingredients" :key="ingredient.name">
-        <th>{{ ingredient.name }}</th>
+        <td>{{ ingredient.name }}</td>
         <td class="has-text-right">{{ round(ingredient.amount) }} g</td>
       </tr>
     </tbody>

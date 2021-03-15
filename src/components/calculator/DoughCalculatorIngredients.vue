@@ -2,25 +2,19 @@
   <h4 class="title is-4">Ingredients</h4>
 
   <template v-for="ingredient in ingredients" :key="ingredient.order">
-    <div v-if="ingredient.included" class="field">
-      <label class="label"
-        >{{ ingredient.label }}
-        <button
-          class="delete is-small delete-btn"
-          v-if="!ingredient.locked"
-          @click="toggleIncluded(ingredient)"
-        ></button>
-      </label>
-      <div class="control">
-        <input
-          class="input"
-          type="number"
-          :placeholder="ingredient.placeholder"
-          :disabled="ingredient.locked"
-          v-model.number="ingredient.percentage"
-        />
-      </div>
-    </div>
+    <SliderField
+      v-if="ingredient.included"
+      v-model.number="ingredient.percentage"
+      :label="ingredient.label"
+      :min="ingredient.minValue"
+      :max="ingredient.maxValue"
+      :step="ingredient.stepSize"
+      :disabled="ingredient.locked"
+      :has-output="true"
+      :has-delete-button="!ingredient.isRequired"
+      value-annotation="%"
+      @delete="toggleIncluded(ingredient)"
+    ></SliderField>
   </template>
 
   <template v-for="ingredient in ingredients" :key="ingredient.label">
@@ -40,9 +34,11 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { Ingredient, Ingredients } from "@/components/calculator/model";
+import SliderField from "@/components/form/SliderField.vue";
 
 export default defineComponent({
   name: "DoughCalculatorIngredients",
+  components: { SliderField },
   props: {
     ingredients: {
       type: Object as PropType<Ingredients>,
@@ -56,9 +52,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-.delete-btn {
-  margin-top: 4px;
-}
-</style>

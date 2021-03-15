@@ -47,44 +47,79 @@ export default defineComponent({
         flour: {
           label: "Flour",
           placeholder: "Percentage of flour",
-          percentage: 100,
+          isRequired: true,
+          locked: true,
+          minValue: 0,
+          maxValue: 100,
+          stepSize: 1,
           included: true,
-          locked: true
+          percentage: 100
         } as Ingredient,
         water: {
           label: "Water (Hydration)",
           placeholder: "Percentage of water",
-          percentage: 65,
+          isRequired: true,
+          locked: false,
+          minValue: 0,
+          maxValue: 100,
+          stepSize: 1,
           included: true,
-          locked: false
+          percentage: 65
         } as Ingredient,
         yeast: {
           label: "Yeast",
           placeholder: "Percentage of yeast",
-          percentage: 1,
+          isRequired: true,
+          locked: false,
+          minValue: 0,
+          maxValue: 3,
+          stepSize: 0.1,
           included: true,
-          locked: false
+          percentage: 1
         } as Ingredient,
         salt: {
           label: "Salt",
           placeholder: "Percentage of salt",
-          percentage: 3,
+          isRequired: true,
+          locked: false,
+          minValue: 0,
+          maxValue: 5,
+          stepSize: 0.1,
           included: true,
-          locked: false
+          percentage: 3
         } as Ingredient,
         oil: {
           label: "Oil",
           placeholder: "Percentage of oil",
-          percentage: 0,
+          isRequired: false,
+          locked: false,
+          minValue: 0,
+          maxValue: 5,
+          stepSize: 0.1,
           included: false,
-          locked: false
+          percentage: 0
         } as Ingredient,
         sugar: {
           label: "Sugar",
           placeholder: "Percentage of sugar",
-          percentage: 0,
+          isRequired: false,
+          locked: false,
+          minValue: 0,
+          maxValue: 5,
+          stepSize: 0.1,
           included: false,
-          locked: false
+          percentage: 0
+        } as Ingredient,
+        semola: {
+          label: "Semola",
+          placeholder: "Percentage of semola",
+          isRequired: false,
+          locked: false,
+          minValue: 0,
+          maxValue: 100,
+          stepSize: 1,
+          included: false,
+          percentage: 0
         } as Ingredient
       } as Ingredients,
 

@@ -5,14 +5,19 @@ export interface Ingredients {
   salt: Ingredient;
   oil: Ingredient;
   sugar: Ingredient;
+  semola: Ingredient;
 }
 
 export interface Ingredient {
   label: string;
   placeholder: string;
-  percentage: number;
-  included: boolean;
+  isRequired: boolean;
   locked: boolean;
+  minValue: number;
+  maxValue: number;
+  stepSize: number;
+  included: boolean;
+  percentage: number;
 }
 
 export interface PizzaOptions {
