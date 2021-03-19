@@ -19,19 +19,11 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-menu">
         <div class="navbar-start">
           <router-link class="navbar-item" to="/calculator"
             >Dough Calculator</router-link
           >
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Recipes</a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">Poolish (Vito Iacopelli)</a>
-              <a class="navbar-item">Direct Dough (Vincenzo)</a>
-              <a class="navbar-item">Other</a>
-            </div>
-          </div>
           <router-link class="navbar-item" to="/about">About</router-link>
         </div>
         <div class="navbar-end">
