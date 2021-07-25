@@ -44,7 +44,7 @@ export default defineComponent({
   },
   methods: {
     round(value: number): string {
-      return roundToDigits(value, 1).toFixed(1);
+      return roundToDigits(value, 2).toFixed(2);
     }
   },
   computed: {
