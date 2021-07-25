@@ -20,7 +20,7 @@ export default defineComponent({
 
 // see: https://github.com/Wikiki/bulma-slider
 
-$slider-output-width: 3.8rem !default
+$slider-output-width: 4.2rem !default
 $slider-output-background: $grey-dark !default
 $slider-output-radius: $radius !default
 
