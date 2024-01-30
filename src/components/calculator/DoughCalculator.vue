@@ -14,7 +14,7 @@
 
     <div class="column is-4" v-if="showRecipe">
       <div class="box">
-        <ResultRecipe :recipe="recipe" />
+        <ResultRecipe :recipe="recipe!" />
       </div>
     </div>
   </div>
@@ -25,11 +25,11 @@ import { defineComponent } from "vue";
 import IngredientsModifier from "@/components/calculator/DoughCalculatorIngredients.vue";
 import ResultRecipe from "@/components/calculator/DoughCalculatorRecipe.vue";
 import {
-  Ingredient,
-  Ingredients,
-  PizzaOptions,
-  Recipe,
-  RecipeIngredient
+  type Ingredient,
+  type Ingredients,
+  type PizzaOptions,
+  type Recipe,
+  type RecipeIngredient
 } from "@/components/calculator/model";
 import OptionsModifier from "@/components/calculator/DoughCalculatorOptions.vue";
 

@@ -8,9 +8,9 @@
       <BaseInputRange
         class="slider"
         v-model.number="value"
-        min="0"
-        max="100"
-        step="1"
+        :min="0"
+        :max="100"
+        :step="1"
         :disabled="disabled"
       />
       <BaseOutput class="output" :disabled="disabled"

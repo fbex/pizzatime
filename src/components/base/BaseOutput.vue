@@ -16,7 +16,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="sass">
-@import "~bulma/sass/utilities/_all.sass"
+@import "bulma/sass/utilities/_all.sass"
 
 // see: https://github.com/Wikiki/bulma-slider
 

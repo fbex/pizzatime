@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import { PizzaOptions } from "@/components/calculator/model";
+import { defineComponent, type PropType } from "vue";
+import { type PizzaOptions } from "@/components/calculator/model";
 import BaseInputNumber from "@/components/calculator/BaseInputNumber.vue";
 
 export default defineComponent({
