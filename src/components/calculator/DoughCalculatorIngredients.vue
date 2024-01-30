@@ -32,8 +32,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import { Ingredient, Ingredients } from "@/components/calculator/model";
+import { defineComponent, type PropType } from "vue";
+import { type Ingredient, type Ingredients } from "@/components/calculator/model";
 import SliderField from "@/components/form/SliderField.vue";
 
 export default defineComponent({

@@ -37,7 +37,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="sass">
-@import "~bulma/sass/utilities/_all.sass"
+@import "bulma/sass/utilities/_all.sass"
 
 // see: https://github.com/Wikiki/bulma-slider
 
@@ -53,7 +53,7 @@ $slider-thumb-shadow: none !default
 $slider-thumb-to-track-ratio: 2 !default
 
 =slider-size($size)
-  $track-height: $size / $slider-thumb-to-track-ratio
+  $track-height: calc($size / $slider-thumb-to-track-ratio)
   $thumb-size: $size
 
   min-height: calc((#{$size} + 2px) * 1.25)
@@ -81,7 +81,7 @@ $slider-thumb-to-track-ratio: 2 !default
     margin-top: 0
 
   &::-webkit-slider-thumb
-    margin-top: -($thumb-size / 4)
+    margin-top: - calc($thumb-size / 4)
 
 .slider
   appearance: none

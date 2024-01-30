@@ -26,8 +26,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import { Recipe } from "@/components/calculator/model";
+import { defineComponent, type PropType } from "vue";
+import { type Recipe } from "@/components/calculator/model";
 
 function roundToDigits(float: number, digits: number): number {
   const rounded = Math.pow(10, digits);
