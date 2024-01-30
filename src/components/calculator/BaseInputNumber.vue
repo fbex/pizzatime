@@ -4,7 +4,9 @@
     <div class="control">
       <input
         class="input"
-        type="number"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        type="text"
         :placeholder="placeholder"
         v-model.number="value"
       />
