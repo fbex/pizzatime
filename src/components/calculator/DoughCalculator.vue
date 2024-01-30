@@ -40,7 +40,7 @@ export default defineComponent({
     return {
       options: {
         numberOfPizzas: 4,
-        weightPerPizza: 260
+        weightPerPizza: 275
       } as PizzaOptions,
 
       ingredients: {
@@ -64,7 +64,7 @@ export default defineComponent({
           maxValue: 100,
           stepSize: 1,
           included: true,
-          percentage: 68
+          percentage: 70
         } as Ingredient,
         yeast: {
           label: "Yeast",
@@ -86,7 +86,7 @@ export default defineComponent({
           maxValue: 5,
           stepSize: 0.1,
           included: true,
-          percentage: 3
+          percentage: 3.4
         } as Ingredient,
         oil: {
           label: "Oil",
@@ -97,7 +97,7 @@ export default defineComponent({
           maxValue: 5,
           stepSize: 0.1,
           included: true,
-          percentage: 2.2
+          percentage: 3.4
         } as Ingredient,
         sugar: {
           label: "Sugar",
@@ -108,7 +108,7 @@ export default defineComponent({
           maxValue: 5,
           stepSize: 0.1,
           included: true,
-          percentage: 1
+          percentage: 1.5
         } as Ingredient,
         semola: {
           label: "Semola",
