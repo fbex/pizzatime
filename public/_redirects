@@ -1,1 +1,6 @@
+# redirect pizzatime.fbex.io to pizza.fbex.io
+http://pizzatime.fbex.io/* https://pizza.fbex.io/:splat 301!
+https://pizzatime.fbex.io/* https://pizza.fbex.io/:splat 301!
+
+# handle page refresh of SPA
 /*  /index.html  200
